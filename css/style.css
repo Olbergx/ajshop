@@ -76,8 +76,6 @@ img{    /* No image borders */
 }
 
 
-
-
 .footer{
     width:600px;
     height: 30px;
@@ -102,19 +100,6 @@ img{    /* No image borders */
         padding: 10px;
 
 }
-
-
-#capcha {
-        width:600px; 
-        height:100px; 
-        /*background:#f1f1f1;*/ 
-        float:left; 
-        margin: 0 15px 15px 0; 
-        text-align:center;
-        padding: 10px;
-
-}
-
 
 .thank4{
         width:600px; 
@@ -247,7 +232,7 @@ img{    /* No image borders */
 }
 
 #capa{
-        /*margin: 0 auto; */
+        margin: 0 auto; 
         width: 30px; 
         height: 20px;
         color: #000000; 

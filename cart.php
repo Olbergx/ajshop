@@ -60,7 +60,8 @@
 
 
 <br> <br> 
-            
+            <div id="capa" style="display:none; margin: 0 auto;" class="g-recaptcha" data-sitekey="6LfAs2AUAAAAAHssICeXdYo7B7ktHhnujNHXpaNf"></div><br>
+          </div>
   
 
 
@@ -87,23 +88,7 @@ var str = "№ Наименование   Сумма " + "\n" + $("#shopping_car
 
     
 
-      
-
-
-</form>
-
-
-
-
-<div id="capcha" > 
-
-
-
-<div id="capa" style="display:none;" class="g-recaptcha" data-sitekey="6LfAs2AUAAAAAHssICeXdYo7B7ktHhnujNHXpaNf"></div>
-          
-
-
-<div id="hide4" style="display:none; color: #FF0000; font-weight: bold; text-align:center; font-size: 18pt;">
+      <div id="hide4" style="display:none; color: #FF0000; font-weight: bold; text-align:center; font-size: 18pt;">
             
             
         <input  id="btn7"  type="submit" 
@@ -111,10 +96,15 @@ var str = "№ Наименование   Сумма " + "\n" + $("#shopping_car
             
            
        </div>
-  
 
 
-</div>
+</form>
+
+
+
+
+
+
 
 
 
@@ -125,12 +115,12 @@ $('#btn7').click(function(){
 
 
 $("#successdiv").fadeIn();
- $("#successdiv").delay(5000).fadeOut();
+ $("#successdiv").delay(10000).fadeOut();
 
-$("#order-form4").delay(5000).fadeOut();
+$("#order-form4").delay(10000).fadeOut();
 
 
-     setTimeout(function() {window.location.reload();}, 5000);
+     setTimeout(function() {window.location.reload();}, 10000);
 
 
 // $("#shopping_cart_items").closest('tr[id]').remove();
