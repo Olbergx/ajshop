@@ -125,12 +125,12 @@ $('#btn7').click(function(){
 
 
 $("#successdiv").fadeIn();
- $("#successdiv").delay(10000).fadeOut();
+ $("#successdiv").delay(5000).fadeOut();
 
-$("#order-form4").delay(10000).fadeOut();
+$("#order-form4").delay(5000).fadeOut();
 
 
-     setTimeout(function() {window.location.reload();}, 10000);
+     setTimeout(function() {window.location.reload();}, 5000);
 
 
 // $("#shopping_cart_items").closest('tr[id]').remove();
