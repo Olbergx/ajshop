@@ -1,0 +1,221 @@
+http://www.dhtmlgoodies.com/index.html?whichScript=fly-to-basket
+
+You can download the script from this Zip file
+
+Files included in the package:
+
+fly-to-basket.html = Main HTML file for the demo
+js/fly-to-basket.js = Javascript code for this script
+js/ajax.js = Ajax (Library from http://twilightuniverse.com/projects/sack)
+addProduct.php = Server side file which retreves productId from the script and adds it to the basket
+images/*	= Images for this demo
+Configuration
+This is the HTML for products on the page
+<div id="slidingProduct1" class="sliding_product">
+  <img src="images/product.gif">
+  Calendar<br>
+  50.00
+</div>
+<a href="#" onclick="addToBasket(1);return false;"><img src="images/basket.gif"></a>
+There are two important things you have to notice here:
+
+The id of the div have to be slidingProduct<product ID>, example: slidingProduct1 for the product with ID "1" in your database.
+. This is the div that will "fly" to the basket.
+Call the function addToBasket(<product ID>) to add products to the basket. Example: addProduct(1) to add product with ID=1 to the basket
+addProduct.php
+This is a PHP file which is called by Ajax when a product is added to the basket(It's not required to use PHP. You can create it in ASP, JSP or other server side language). This file receives a variable named "productId". Then, this file should update the content of the shopping basket in a database. Finally, it outputs a string in the following format:
+
+product ID|||Product description|||product price
+
+I.e.: product ID, 3 pipes, product description, 3 pipes and finally the price of the product
+
+removeProduct.php
+This PHP file is used to remove products from the shopping basket. Input to this file is a GET variable named
+productIdToRemove
+. What you have to do inside this PHP file is to subtract one item of this product from the basket(i.e. in the Database). Then output the string "OK" if the update was executed successfully.
+
+Javascript variables
+At the top of the fly-to-basket.js file, you will find 3 variables which you can modify:
+
+var flyingSpeed = 25;
+var url_addProductToBasket = 'addProduct.php';
+var txt_totalPrice = 'Total: ';
+
+flyingSpeed is used to control how fast your products flies to the basket. 
+url_addProductToBasket is where you put the url to your server side files(i.e. addProduct.php). 
+txt_totalPrice is a text label shown at the bottom of the shopping basket in front of the total price.
+
+showAjaxBasketContent function
+Inside fly-to-basket.js you will find a function with the name showAjaxBasketContent. This function updates the text in the right column, i.e. the shopping cart. I have added some comments to code in this function in case you need to modify it.
+
+Showing existing basket items
+When someone navigates on your page, you have to write out the existing basket items from your database. The demo isn't connected to a database, so when you refresh the page, the basket at the right side will be empty. This is the HTML code for the shopping basket in the right column:
+
+<table id="shopping_cart_items">
+  <tr>
+    <th>Items</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+  <!-- Here, you can output existing basket items from your database 
+  One row for each item. The id of the TR tag should be shoping_cart_items_product + productId,
+  example: shoping_cart_items_product1 for the id 1 -->
+  
+  
+</table>
+If there's allready items in the basket, you have to add rows to this table, example:
+
+<tr id="shoping_cart_items_product1">
+  <td>1</td>
+  <td>Calendar</td>
+  <td>50.00</td>
+  <td><a href="#" onclick="removeProductFromBasket(1);return false;"></td>
+</tr>
+Update log
+June, 14th, 2006 - Added support for removing objects from basket.
+Comments
+1
+2
+3
+4
+5
+Fr3 very usefull script, the greatest thx!
+FR3 AT 04:19AM, 2011/06/11.
+1
+2
+3
+4
+5
+Mancho Hi, I am very interested in the script, but since not programmer difficalt to integrate it intu CMS (Drupal)please, help or let me know if you know some video tutorialthanks
+MANCHO AT 01:50PM, 2011/09/29.
+1
+2
+3
+4
+5
+Andreas That is very cool!!How can i install it to my Magento eshop?Is there an easy way?
+ANDREAS AT 02:55PM, 2011/10/20.
+1
+2
+3
+4
+5
+Ashish Hello Dear,This is your script awesmn script and m very interested but let me know how to integrate in joomla version 1.5.23 .Great thanks to you Tell me something how to integrate script
+ASHISH AT 06:50AM, 2011/11/01.
+1
+2
+3
+4
+5
+elisa hi,i tried to convert the addProduct.php to addProduct.asp (php to asp) but i'm not able to receveid the productId.I've tried with request.form("productId") but it's not working...what can i do?Thanks in advance,Elisa
+ELISA AT 03:20PM, 2011/11/02.
+1
+2
+3
+4
+5
+den_4ik this is my addProduct.php :
+
+"<?
+include ('blocks/db.php');
+
+if(!isset($_POST['productId']))exit;
+if(isset($_POST['productId'])) {$productId=$_POST['productId'];} 
+
+$result = mysql_query("SELECT id,name,price FROM 'table_name' WHERE id=$productId",$db);
+$myrow = mysql_fetch_array($result);
+
+echo $myrow['id'];
+echo "|||";
+echo $myrow['name'];
+echo "|||";
+echo $myrow['price'];
+
+?>"
+DEN_4IK AT 08:01AM, 2011/11/30.
+1
+2
+3
+4
+5
+Praveen Singh Shekhawat is there a problem with this .when i'll refresh my page the the values are unavailable. any one can help me ?:( :(
+PRAVEEN SINGH SHEKHAWAT AT 11:44AM, 2011/12/22.
+1
+2
+3
+4
+5
+Prabhat Hi,Nice Script.How to convert it to complete Client side script without PHP?Can XML file be loaded for product list with links to product images, descrition, rates etc ?Can the product addition and deletion from the cart be done fully on client side ?A sample code shall be appreciated.
+PRABHAT AT 02:15AM, 2011/12/25.
+1
+2
+3
+4
+5
+dpr wonderful script but without much use. Its a dumb doll. None is out there to help people to integrate with their shopping carts. DHTMLGoodies maintain glorious silence. Forums use jugllary of words but non tells how to integrate it with zencart,oscommerce, drupal,joomla etc etc.
+
+If it doesn't really fly-to-basket it will surely fly-to-dustbin.
+DPR AT 08:33AM, 2012/01/06.
+1
+2
+3
+4
+5
+longbo567 i watched the demo, really great job!!!
+LONGBO567 AT 11:52AM, 2012/01/10.
+1
+2
+3
+4
+5
+daian but how to sub only one piece of the basket not the whole product?
+DAIAN AT 02:47PM, 2012/01/31.
+1
+2
+3
+4
+5
+Shanmuga Sundaram Hai! Its Really SuperI did Convert php to jsp ... Thank..
+SHANMUGA SUNDARAM AT 04:55AM, 2012/03/07.
+1
+2
+3
+4
+5
+marcos very good, I pofria integrate joomla virtue mart? help please
+MARCOS AT 10:37PM, 2012/05/21.
+1
+2
+3
+4
+5
+khushal i want to add this in my ASp.net C# project ..so if any have the code than please help me..my email id iskhushal_krs@yahoo.comThanx in Advance.........
+KHUSHAL AT 06:36AM, 2012/07/25.
+1
+2
+3
+4
+5
+shahbaz Hi,I can't receive the productId at the addProduct page .can anyone help me plz reply me onshahbaz_mehar89@yahoo.comThnx in advnce.....
+SHAHBAZ AT 05:28AM, 2013/01/28.
+1
+2
+3
+4
+5
+rinzler Anyone has achieved to store the shopping cart items into a Session ?It's even possible with this script ? LoL
+RINZLER AT 02:11PM, 2013/02/19.
+1
+2
+3
+4
+5
+waenkung Thank you for script is help me. :D
+WAENKUNG AT 11:30AM, 2014/08/29.
+1
+2
+3
+4
+5
+Javi Hola,tengo un pequeA±o problema y me gustarA­a saber si todavA­a hay alguien al tanto que me pueda echar una mano.Gracias. Un saludo.
