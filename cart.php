@@ -104,13 +104,6 @@ var str = "№ Наименование   Сумма " + "\n" + $("#shopping_car
 
 
 
-
-
-
-
-
-
-
 <script>
   
 $('#btn7').click(function(){  

@@ -199,7 +199,7 @@
           
             $('#btn1').click(function(){  
                 $.ajax({  
-                    url: "http://localhost:8888/ajaxshop/main.php",  
+                    url: "http://localhost:8888/ajshop/main.php",  
                     cache: false,  
                     success: function(html){  
                         $("#products").html(html);  
@@ -211,7 +211,7 @@
 
   $('#btn2').click(function(){  
                 $.ajax({  
-                    url: "http://localhost:8888/ajaxshop/main2.php",  
+                    url: "http://localhost:8888/ajshop/main2.php",  
                     cache: false,  
                     success: function(html){  
                         $("#products").html(html);  
@@ -222,7 +222,7 @@
 
    $('#btn3').click(function(){  
                 $.ajax({  
-                    url: "http://localhost:8888/ajaxshop/main3.php",  
+                    url: "http://localhost:8888/ajshop/main3.php",  
                     cache: false,  
                     success: function(html){  
                         $("#products").html(html);  
@@ -233,7 +233,7 @@
 
  $('#btn4').click(function(){  
                 $.ajax({  
-                    url: "http://localhost:8888/ajaxshop/main4.php",  
+                    url: "http://localhost:8888/ajshop/main4.php",  
                     cache: false,  
                     success: function(html){  
                         $("#products").html(html);  
@@ -245,7 +245,7 @@
               
             $('#zak').click(function(){  
                 $.ajax({  
-                    url: "http://localhost:8888/ajaxshop/cart.php",  
+                    url: "http://localhost:8888/ajshop/cart.php",  
                     cache: false,  
                     success: function(html){  
                         $("#products").html(html); 
