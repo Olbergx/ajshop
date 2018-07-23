@@ -1,7 +1,7 @@
 ﻿
 <html>
 <head>
-<link rel="stylesheet" href="css/style.css" media="all">
+<link rel="stylesheet" href="css/style.css?1" media="all">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
@@ -94,8 +94,7 @@ var str = "№ Наименование   Сумма " + "\n" + $("#shopping_car
       <div id="hide4" style="display:none; color: #FF0000; font-weight: bold; text-align:center; font-size: 18pt;">
             
             
-        <input  id="btn7"  type="submit" 
-        class="button-blue" value="ЗАКАЗАТЬ">
+        <input  id="btn7"  type="submit" class="button-blue" value="ЗАКАЗАТЬ">
             
            
        </div>
