@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/recaptchalib.php';
 $sendto   = "al-nevsk@mail.ru"; // почта, на которую будет приходить письмо
 $username =  trim($_POST["nam1"]);   // сохраняем в переменную данные полученные из поля c именем
 $phone = trim($_POST["tel"]); // сохраняем в переменную данные полученные из поля c телефонным номером
@@ -15,7 +15,7 @@ if ($_POST["btn7"]!== ''){
 
  if(isset($_POST['g-recaptcha-response'])&& $_POST['g-recaptcha-response']){
         var_dump($_POST);
-        $secret = "6LfAs2AUAAAAAIZoVUMiw8Tva_nAQb_z_XduS3W9";
+        $secret = "6LfAs2AUAAAAAHssICeXdYo7B7ktHhnujNHXpaNf";
         $ip = $_SERVER['REMOTE_ADDR'];
         $captcha = $_POST['g-recaptcha-response'];
         $rsp  = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha&remoteip$ip");
@@ -35,7 +35,7 @@ $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
 
 // Формирование тела письма
 $msg  = "<html><body style='font-family:Arial,sans-serif;'>\r\n";
-$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Заказ в интернет магазине ИП Берг О.В.</h2>\r\n";
+$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Заказ в интернет магазине</h2>\r\n";
 $msg .= "<p><strong>Имя:</strong> ".$username."</p>\r\n";
 $msg .= "<p><strong>Почта:</strong> ".$email."</p>\r\n";
 $msg .= "<p><strong>Телефон:</strong> ".$phone."</p>\r\n";
@@ -50,7 +50,7 @@ echo "<center><img src='images/ne-otpravleno.png'></center>";
 }
 
 
-header('Location: http://a.tvc.su');
+header('Location: #');
         
 
 

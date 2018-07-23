@@ -157,7 +157,7 @@ img{    /* No image borders */
 #nam1{
         
         width:600px; 
-        height: 50px;
+        height: 30px;
         color: red; 
         font-weight: bold; 
         text-align:center; 
@@ -168,7 +168,18 @@ img{    /* No image borders */
 #tel{
         
         width:600px; 
-        height: 50px;
+        height: 30px;
+        color: red; 
+        font-weight: bold; 
+        text-align:center; 
+        font-size: 14pt;
+        float:left; 
+
+}
+#email{
+        
+        width:600px; 
+        height: 30px;
         color: red; 
         font-weight: bold; 
         text-align:center; 

@@ -6,13 +6,13 @@
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
 <!-- API ключ от Google -->
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 </head>
 
 <body>
    
 
-<form id="order-form4" method="post" class="opacity0" action="php/mail.php" >
+<form id="order-form4" method="post" class="opacity0" action="php/mailrec.php" >
                              <div class="thank4">
                                 <h4><p id="dann" style="color: #0000FF; font-weight: bold; text-align:center; font-size: 14pt;">ЗАПОЛНИТЕ ВАШИ ДАННЫЕ:</p> </div>
 
@@ -23,18 +23,20 @@
                                     
  
 
-<input type="text" name="nam1" id="nam1" value="" placeholder="ВАШЕ ИМЯ" >
+      <input type="text" name="nam1" id="nam1" value="" placeholder="ВАШЕ ИМЯ" />
+      <br> <br>
 
-
-   <br> <br>
+      <input type="email" name="uemail" id="email" value="" placeholder="ВАШ EMAIL" />
+       <br> <br>
     
-      <input type="tel" required placeholder="+7 (___) ___-__-__" id="tel" name="tel" value=""  class="user-phone" title="Формат: +7 (999) 999 99 99"/> 
+      <input type="tel" required placeholder="+7 (___) ___-__-__" name="tel" id="tel" value="" class="user-phone" title="Формат: +7 (999) 999 99 99" /> 
    <!-- </div>  -->
 
 
    <!-- <input type="hidden" id="hiden" name="title" value="" /> -->
 
-  
+
+              
 
 <div style="color: #0000FF; margin-top: 5%; font-weight: bold; text-align:center; font-size: 14pt;">ВЫ ЗАКАЗАЛИ:</div> 
 
@@ -61,7 +63,7 @@
 
 
 <br> <br> 
-            <div id="capa" style="display:none; margin: 0 auto;" class="g-recaptcha" data-sitekey="6LfAs2AUAAAAAHssICeXdYo7B7ktHhnujNHXpaNf"></div><br>
+            <div id="capa" style="display:none; margin: 0 auto;" class="g-recaptcha" data-sitekey="6LdXtmUUAAAAAMjxdfImb3QMET4DSdiu17LVPF1G"></div><br>
           </div>
   
 

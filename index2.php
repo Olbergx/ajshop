@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/fly-to-basket.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/script.js"></script>
 
 </head>
@@ -149,19 +150,6 @@
       </div>
       <!-- END DIV FOR A PRODUCT -->      
     
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		</div>	
