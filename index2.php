@@ -18,8 +18,6 @@
 <div class="header"></div>
 
 
-
-
 <div id="mainContainer">
 
 <div class="menu">  
